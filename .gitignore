@@ -22,6 +22,7 @@
 package-lock.json
 node_modules
 build
+dist/
 .pnp
 .pnp.js
 coverage
@@ -31,6 +32,7 @@ coverage
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
