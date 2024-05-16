@@ -1,1 +1,1 @@
-export {PageTemplate} from './ui/page-template.jsx'
+export { PageTemplate } from './ui/page-template.jsx'

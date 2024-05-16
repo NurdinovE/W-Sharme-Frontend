@@ -1,1 +1,1 @@
-export {RegisterPage} from './ui.jsx'
+export { RegisterPage } from './ui.jsx'

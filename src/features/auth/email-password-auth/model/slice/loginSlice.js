@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   username: '',
@@ -23,5 +23,5 @@ export const loginSlice = createSlice({
   }
 })
 
-export const {actions: loginActions} = loginSlice
-export const {reducer: loginReducer} = loginSlice
+export const { actions: loginActions } = loginSlice
+export const { reducer: loginReducer } = loginSlice

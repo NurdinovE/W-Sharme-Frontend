@@ -1,9 +1,9 @@
-import {TextInput, PasswordInput, Anchor, Title, Text, Container, Button} from '@mantine/core'
+import { TextInput, PasswordInput, Anchor, Title, Text, Container, Button } from '@mantine/core'
 import classes from './register-form.module.css'
-import {NavLink} from 'react-router-dom'
-import {useDispatch} from 'react-redux'
-import React, {useState} from 'react'
-import {registerByUsername} from '../../model/services/registerByUsername.js'
+import { NavLink } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import React, { useState } from 'react'
+import { registerByUsername } from '../../model/services/registerByUsername.js'
 
 export function RegisterForm() {
   const dispatch = useDispatch()

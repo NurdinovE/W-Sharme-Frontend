@@ -1,1 +1,1 @@
-export {LoginPage} from './ui.jsx'
+export { LoginPage } from './ui.jsx'

@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   username: '',
@@ -39,5 +39,5 @@ export const registrationSlice = createSlice({
   }
 })
 
-export const {actions: registerActions} = registrationSlice
-export const {reducer: registerReducer} = registrationSlice
+export const { actions: registerActions } = registrationSlice
+export const { reducer: registerReducer } = registrationSlice

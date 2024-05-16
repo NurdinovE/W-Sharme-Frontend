@@ -1,8 +1,8 @@
-import {createAsyncThunk} from '@reduxjs/toolkit'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-import {userActions} from '@/entities/auth/viewer'
-import {USER_LOCALSTORAGE_KEY} from '@/shared/const/localstorage.js'
-import {loginActions} from '../slice/loginSlice'
+import { userActions } from '@/entities/auth/viewer'
+import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage.js'
+import { loginActions } from '../slice/loginSlice'
 import apiConfig from '@/app/config/api/apiConfig.js'
 
 export const loginByUsername = createAsyncThunk('login/loginByUsername', async (authData, thunkAPI) => {

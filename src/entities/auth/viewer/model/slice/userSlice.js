@@ -1,5 +1,5 @@
-import {createSlice} from '@reduxjs/toolkit'
-import {USER_LOCALSTORAGE_KEY} from '@/shared/const/localstorage'
+import { createSlice } from '@reduxjs/toolkit'
+import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage'
 
 const initialState = {
   authData: ''
@@ -25,5 +25,5 @@ export const userSlice = createSlice({
   }
 })
 
-export const {actions: userActions} = userSlice
-export const {reducer: userReducer} = userSlice
+export const { actions: userActions } = userSlice
+export const { reducer: userReducer } = userSlice

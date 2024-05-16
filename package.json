@@ -1,5 +1,5 @@
 {
-  "name": "alim",
+  "name": "w-sharme",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
-    "@mantine/core": "^5.8.4",
+    "@mantine/core": "^5.10.5",
     "@mantine/ds": "^5.9.0",
-    "@mantine/hooks": "^5.8.4",
+    "@mantine/hooks": "^5.10.5",
     "@reduxjs/toolkit": "^1.9.7",
+    "@tabler/icons-react": "^3.3.0",
     "axios": "^1.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +24,8 @@
     "react-redux": "^8.1.3",
     "react-router-dom": "^6.4.3",
     "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "sass": "^1.77.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
