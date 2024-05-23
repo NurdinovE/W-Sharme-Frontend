@@ -1,0 +1,23 @@
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    @media (max-width: 1200px) {
+        grid-template-columns: 60% 40%;
+    }
+    @media (max-width: 769px) {
+        grid-template-columns: 1fr;
+    }
+
+}
+.image {
+    background-size: cover;
+    background-image: url("../image/loginImage.png");
+    background-position: center;
+    min-height: 100vh;
+    @media (max-width: 769px) {
+        display: none;
+    }
+}

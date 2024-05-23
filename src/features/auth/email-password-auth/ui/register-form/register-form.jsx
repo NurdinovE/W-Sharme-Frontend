@@ -1,78 +1,137 @@
-import { TextInput, PasswordInput, Anchor, Title, Text, Container, Button } from '@mantine/core'
+import { PasswordInput, Title, Text, Button, Input, Paper } from '@mantine/core'
 import classes from './register-form.module.css'
 import { NavLink } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 import React, { useState } from 'react'
-import { registerByUsername } from '../../model/services/registerByUsername.js'
+// import { registerByUsername } from '../../model/services/registerByUsername.js'
+import {
+  createUserWithEmailAndPassword
+  // signInWithEmailAndPassword,
+} from 'firebase/auth'
+import { auth } from '../../../../../app/firebase/firebase-config.js'
 
 export function RegisterForm() {
-  const dispatch = useDispatch()
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: ''
-  })
-  const handleChange = e => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [checked, setChecked] = useState(false)
+  // const dispatch = useDispatch()
+  // const [formData, setFormData] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   username: '',
+  //   email: '',
+  //   password: ''
+  // })
+  // const handleChange = e => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   })
+  // }
 
-  const handleSubmit = e => {
-    console.log(formData)
-    e.preventDefault()
-    dispatch(registerByUsername(formData))
+  // const handleSubmit = e => {
+  //   console.log(formData)
+  //   e.preventDefault()
+  //   dispatch(registerByUsername(formData))
+  // }
+
+  const handleSignUp = () => {
+    if (!email || !password) return
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(userCredential => {
+        const user = userCredential.user
+        console.log(user)
+      })
+      .catch(error => {
+        const errorCode = error.code
+        const errorMessage = error.message
+        console.log(errorCode, errorMessage)
+      })
   }
+  const handleEmailChange = event => setEmail(event.target.value)
+  const handlePasswordChange = event => setPassword(event.target.value)
 
   return (
-    <Container size={420} my={40}>
-      <Title ta="center" className={classes.title}>
+    <Paper className={classes.register_wrapper}>
+      <Title order={2} ta="center" mb={'30px'}>
         Регистрация
       </Title>
-      <Text c="dimmed" size="sm" ta="center" mt={5}>
-        У вас уже есть аккаунт?{' '}
-        <Anchor size="sm" component="button">
-          <NavLink to="/login">Войти</NavLink>
-        </Anchor>
-      </Text>
-
-      <form onSubmit={handleSubmit}>
-        <TextInput
-          label="Username"
-          placeholder="Username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
+      <form onSubmit={handleSignUp}>
+        <Input
+          name="email"
+          placeholder="Эл.адрес"
+          required
+          size="md"
+          styles={{
+            input: {
+              border: 'none',
+              borderRadius: '10px',
+              backgroundColor: '#f3f3f3',
+              height: '50px'
+            }
+          }}
+          // error={errors.username}
+          onChange={event => handleEmailChange(event)}
+          className={classes.input}
+          // value={username}
         />
-        <TextInput
-          label="firstName"
-          placeholder="firstName"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-        />
-        <TextInput
-          label="lastName"
-          placeholder="lastName"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
-        <TextInput label="email" placeholder="email" name="email" value={formData.email} onChange={handleChange} />
         <PasswordInput
-          label="Password"
-          placeholder="Password"
           name="password"
-          value={formData.password}
-          onChange={handleChange}
+          placeholder="Введите пароль"
+          required
+          // error={errors.password}
+          mt="md"
+          size="md"
+          styles={{
+            input: {
+              border: 'none',
+              borderRadius: '10px',
+              backgroundColor: '#f3f3f3',
+              height: '50px'
+            }
+          }}
+          onClick={event => handlePasswordChange(event)}
+          // value={password}
         />
-        <Button variant="filled" color="yellow" type="submit">
-          Зарегистрироваться
+        <div className={classes.checkbox}>
+          <input
+            className={classes.custom_checkbox}
+            type="checkbox"
+            onChange={() => {
+              setChecked(!checked)
+            }}
+            checked={checked}
+            name="checkbox"
+          />
+          <label htmlFor="checkbox">
+            Я даю согласие на
+            <a href="#" style={{ color: '#BA75FE', textDecoration: 'underline', marginLeft: '5px' }}>
+              рассылку уведомлений.
+            </a>
+          </label>
+        </div>
+        <Button
+          fullWidth
+          size="lg"
+          type="submit"
+          styles={{
+            root: {
+              backgroundColor: '#BA75FE',
+              transition: '0.3s',
+              marginTop: '20px',
+              marginBottom: '20px',
+              '&:hover': {
+                backgroundColor: '#BA75FE90'
+              }
+            }
+          }}
+        >
+          Далее
         </Button>
       </form>
-    </Container>
+      <Text c="dimmed" size="sm" ta="center" mt={5}>
+        <NavLink to="/login">Уже есть аккаунт? Нажмите для входа</NavLink>
+      </Text>
+    </Paper>
   )
 }

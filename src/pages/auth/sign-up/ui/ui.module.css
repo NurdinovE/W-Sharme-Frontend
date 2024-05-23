@@ -1,0 +1,29 @@
+.register_wrapper{
+    box-shadow: 0 4px 34px #00000010;
+    padding: 50px;
+    border-radius: 30px;
+    width: 70%;
+    height: 300px;
+        
+    @media (max-width: 1200px) {
+        & {
+            padding: 30px;
+        }
+    }
+    @media (max-width: 769px) {
+        span{
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 480px) {
+        span{
+            font-size: 12px;
+        }
+    }
+    .buttons{
+        @media (max-width: 480px) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}
