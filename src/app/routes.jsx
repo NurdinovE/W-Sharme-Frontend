@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { HomePage, LoginPage, RegisterPage } from '@/pages'
+import { AdminCommunity, Community, HomePage, LoginPage, RegisterPage } from '@/pages'
 
 export const router = createBrowserRouter([
   {
@@ -13,5 +13,13 @@ export const router = createBrowserRouter([
   {
     path: '/register',
     element: <RegisterPage />
+  },
+  {
+    path: '/community',
+    element: <Community />
+  },
+  {
+    path: '/admin-community',
+    element: <AdminCommunity />
   }
 ])
