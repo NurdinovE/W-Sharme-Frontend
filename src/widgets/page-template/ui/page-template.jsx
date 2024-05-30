@@ -1,13 +1,18 @@
 import React from 'react'
 import { HeaderMenu } from '@/widgets/header'
-import { Menu } from '../../menu/ui/menu'
+import { Sidebar } from '../../sidebar'
+import cls from './pagetemplate.module.scss'
 
 export const PageTemplate = ({ children }) => {
   return (
     <div>
       <HeaderMenu />
-      <Menu />
-      {children}
+      <div className="container">
+        <div className={cls.pages}>
+          <Sidebar />
+          <div>{children}</div>
+        </div>
+      </div>
     </div>
   )
 }

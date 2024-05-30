@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { HomePage, LoginPage, RegisterPage } from '@/pages'
-import { Chat } from '../pages/chat/chat'
+import { Chat } from '@/pages/chat/chat'
+import { AdminCommunity, Community, HomePage, LoginPage, RegisterPage } from '@/pages'
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +18,14 @@ export const router = createBrowserRouter([
   {
     path: '/chat',
     element: <Chat />
+  },
+  {
+    path: '/community',
+    element: <Community />
+  },
+  {
+    path: '/admin-community',
+    element: <AdminCommunity />
   }
   // {
   //   path: '/announcement',
