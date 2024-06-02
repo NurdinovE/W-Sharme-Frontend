@@ -1,0 +1,296 @@
+.question {
+    
+    &_block {
+        width: 600px;
+        height: 307px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 24px;
+
+        h1 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #0A0A0A;
+            margin-bottom: 15px;
+        }
+
+        .rows {
+            width: 560px;
+            padding: 15px 20px;
+            background-color: #F3F3F3;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                color: #A2A8B0;
+                font-size: 16px;
+                font-weight: 400;
+                background-color: transparent;
+                outline: 0;
+                border: 0;
+            }
+        }
+
+        .row_button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .quest {
+                    width: 124px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    background-color: #BA75FE;
+                    outline: 0;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                .otvet {
+                    width: 124px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    background-color: #F3F3F3;
+                    outline: 0;
+                    color: #A2A8B0;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+            .zadat {
+                width: 140px;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: #F8F1FF;
+                outline: 0;
+                color: #BA75FE;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #A2A8B0;
+            margin-bottom: 15px;
+        }
+
+        .row_img {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                width: 59.49px;
+                height: 59.49px;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    &_blok {
+        width: 600px;
+        height: 555px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+
+        .blok_row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            .row {
+                line-height: 25px;
+                 
+                h3 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #0A0A0A;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #0A0A0A;
+                }
+            }
+
+        }
+
+        .block_row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: #A2A8B0;
+            }
+
+            .skryt {
+                font-size: 18px;
+                font-weight: 400;
+                color: #0A0A0A;
+                cursor: pointer;
+            }
+
+            u {
+                font-size: 18px;
+                font-weight: 400;
+                color: #BA75FE;
+                cursor: pointer;
+            }
+        }
+
+        hr {
+            margin-bottom: 10px;
+        }
+
+        .otvet {
+            font-size: 14px;
+            font-weight: 500;
+            color: #A2A8B0;
+            margin-bottom: 10px;
+        }
+
+        .blok_rows {
+            display: flex;
+            align-items: start;
+            gap: 8px;
+            margin-bottom: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            .row {
+                 
+                h3 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #0A0A0A;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #0A0A0A;
+                }
+            }
+
+        }
+
+        .block_row_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 59px;
+            margin-bottom: 16px;
+            
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #A2A8B0;
+                }
+
+                u {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #BA75FE;
+                    cursor: pointer;
+                }
+            }
+
+            .likes {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #A2A8B0;
+                }
+
+                img {
+                    width: 17.92px;
+                    height: 16.06px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .input_row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input {
+                width: 516px;
+                outline: 0;
+                padding: 10px 20px;
+                background-color: #F3F3F3;
+                font-size: 16px;
+                font-weight: 400;
+                border-radius: 50px;
+            }
+
+            .krug {
+                width: 38px;
+                height: 38px;
+                border-radius: 100%;
+                background-color: #BA75FE;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    }
+}

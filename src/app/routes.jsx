@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { Chat } from '@/pages/chat/chat'
 import { AdminCommunity, Community, HomePage, LoginPage, RegisterPage } from '@/pages'
 import { Profile } from '../pages/profile/profile'
+import { Question } from '../pages/questions/question'
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile />
+  },
+  {
+    path: '/question',
+    element: <Question />
   }
   // {
   //   path: '/announcement',
