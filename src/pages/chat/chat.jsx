@@ -1,5 +1,8 @@
 import { PageTemplate } from '@/widgets/page-template'
-import { Text, Center, SimpleGrid, Button } from '@mantine/core'
+import hands from '../../../src/assets/hands.svg'
+import lupa from '../../../src/assets/lupa.svg'
+import two from '../../../src/assets/two.svg'
+import cls from './chat.module.scss'
 // import { useEffect, useState } from 'react'
 // import icon from '@/assets/bellIcon.svg'
 export function Chat() {
@@ -33,20 +36,91 @@ export function Chat() {
   // console.log(data)
   return (
     <PageTemplate>
-      <div className="container">
-        <SimpleGrid cols={1} spacing="xs" verticalSpacing="xs" style={{ position: 'absolute' }}>
-          <Button variant="transparent">
-            {/* leftIcon={`${icon}`} */}
-            Button 1
-          </Button>
-          <Button variant="transparent">Button 1</Button>
-          <Button variant="transparent">Button 1</Button>
-          <Button variant="transparent">Button 1</Button>
-          <Button variant="transparent">Button 1</Button>
-        </SimpleGrid>
-        <Center>
-          <Text>Добро пожаловать в чат!</Text>
-        </Center>
+      <div className={cls.buttons}>
+        <button>Чат</button>
+        <button>Чат сообществ</button>
+      </div>
+      <div className={cls.chat}>
+        <div className={cls.chat_users}>
+          <div className={cls.input_row}>
+            <img src={lupa} alt="" />
+            <input type="text" placeholder="Поиск" />
+          </div>
+          <div className={cls.users_row}>
+            <img src={hands} alt="" />
+            <div className={cls.user_content}>
+              <div className={cls.user}>
+                <h2>Bella</h2>
+                <p>Привет, как дела</p>
+              </div>
+              <div className={cls.true}>
+                <img src={two} alt="" />
+                <p>17:54</p>
+              </div>
+            </div>
+          </div>
+          <div className={cls.users_row}>
+            <img src={hands} alt="" />
+            <div className={cls.user_content}>
+              <div className={cls.user}>
+                <h2>Bella</h2>
+                <p>Привет, как дела</p>
+              </div>
+              <div className={cls.true}>
+                <img src={two} alt="" />
+                <p>17:54</p>
+              </div>
+            </div>
+          </div>
+          <div className={cls.users_row}>
+            <img src={hands} alt="" />
+            <div className={cls.user_content}>
+              <div className={cls.user}>
+                <h2>Bella</h2>
+                <p>Привет, как дела</p>
+              </div>
+              <div className={cls.true}>
+                <img src={two} alt="" />
+                <p>17:54</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={cls.chat_message}>
+          <div className={cls.user}>
+            <img src={hands} alt="" />
+            <h2>Nastya</h2>
+            <p>был(а) вчера в 23:42</p>
+          </div>
+          <div className={cls.message}>
+            <div className={cls.number}>
+              <div className={cls.num}>
+                <p>18 апреля</p>
+              </div>
+            </div>
+            <div className={cls.message_content}>
+              <img src={hands} alt="" />
+              <div className={cls.mes}>
+                <div className={cls.row}>
+                  <h3>Nastya</h3>
+                  <p>Опишите Ваше состояние, что Вас беспокоит? </p>
+                </div>
+                <p className={cls.time}>00:49</p>
+              </div>
+            </div>
+            <div className={cls.message_request}>
+              <div className={cls.con}>
+                <div className={cls.content}>
+                  <img src={two} alt="" />
+                  <div className={cls.requs}>
+                    <p>Здравствуйте, болит живот</p>
+                  </div>
+                </div>
+                <p className={cls.time}>00:49</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </PageTemplate>
   )

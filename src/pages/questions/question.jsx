@@ -68,25 +68,65 @@ export function Question() {
           <p className={cls.otvet}>3 ответа</p>
           <div className={cls.blok_rows}>
             <img src={hands} alt="" />
-            <div className={cls.row}>
-              <h3>Irina</h3>
-              <p>Все супер! Хочу записаться. Можете сказать сколько стоило этот маникюр?</p>
-            </div>
-          </div>
-          <div className={cls.block_row_content}>
-            <div className={cls.row}>
-              <p>сегодня в 15:53</p>
-              <u>Ответить</u>
-            </div>
-            <div className={cls.likes}>
-              <p>15</p>
-              <img src={jurok} alt="" />
+            <div className={cls.rowss}>
+              <div className={cls.rowi}>
+                <h3>Irina</h3>
+                <p>Все супер! Хочу записаться. Можете сказать сколько стоило этот маникюр?</p>
+              </div>
+              <div className={cls.block_row_content}>
+                <div className={cls.row}>
+                  <p>сегодня в 15:53</p>
+                  <u>Ответить</u>
+                </div>
+                <div className={cls.likes}>
+                  <p>15</p>
+                  <img src={jurok} alt="" />
+                </div>
+              </div>
             </div>
           </div>
           <div className={cls.input_row}>
             <input type="text" placeholder="Ваш коментарий" />
             <div className={cls.krug}>
               <img src={arrow} alt="" />
+            </div>
+          </div>
+          <div className={cls.blok_rows_wraper}>
+            <img src={hands} alt="" />
+            <div className={cls.rowss}>
+              <div className={cls.rowi}>
+                <h3>Irina</h3>
+                <p>Все супер! Хочу записаться. Можете сказать сколько стоило этот маникюр?</p>
+              </div>
+              <div className={cls.block_row_content}>
+                <div className={cls.row}>
+                  <p>сегодня в 15:53</p>
+                  <u>Ответить</u>
+                </div>
+                <div className={cls.likes}>
+                  <p>15</p>
+                  <img src={jurok} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={cls.blok_rows}>
+            <img src={hands} alt="" />
+            <div className={cls.rowss}>
+              <div className={cls.rowi}>
+                <h3>Irina</h3>
+                <p>Все супер! Хочу записаться. Можете сказать сколько стоило этот маникюр?</p>
+              </div>
+              <div className={cls.block_row_content}>
+                <div className={cls.row}>
+                  <p>сегодня в 15:53</p>
+                  <u>Ответить</u>
+                </div>
+                <div className={cls.likes}>
+                  <p>15</p>
+                  <img src={jurok} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

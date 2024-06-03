@@ -194,7 +194,7 @@
             display: flex;
             align-items: start;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
 
             img {
                 width: 50px;
@@ -203,65 +203,66 @@
                 cursor: pointer;
             }
 
-            .row {
-                 
-                h3 {
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #0A0A0A;
+            .rowss {
+
+                .rowi {
                     margin-bottom: 10px;
+                     
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #0A0A0A;
+                        margin-bottom: 10px;
+                    }
+    
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #0A0A0A;
+                    }
                 }
 
-                p {
-                    font-size: 18px;
-                    font-weight: 400;
-                    color: #0A0A0A;
-                }
-            }
-
-        }
-
-        .block_row_content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 59px;
-            margin-bottom: 16px;
-            
-            .row {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-
-                p {
-                    font-size: 18px;
-                    font-weight: 400;
-                    color: #A2A8B0;
-                }
-
-                u {
-                    font-size: 18px;
-                    font-weight: 400;
-                    color: #BA75FE;
-                    cursor: pointer;
-                }
-            }
-
-            .likes {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                p {
-                    font-size: 18px;
-                    font-weight: 400;
-                    color: #A2A8B0;
-                }
-
-                img {
-                    width: 17.92px;
-                    height: 16.06px;
-                    cursor: pointer;
+                .block_row_content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+        
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #A2A8B0;
+                        }
+        
+                        u {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #BA75FE;
+                            cursor: pointer;
+                        }
+                    }
+        
+                    .likes {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+        
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #A2A8B0;
+                        }
+        
+                        img {
+                            width: 21px;
+                            height: 20px;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
@@ -270,6 +271,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-bottom: 16px;
 
             input {
                 width: 516px;
@@ -290,6 +292,84 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+            }
+        }
+
+        .blok_rows_wraper {
+            display: flex;
+            align-items: start;
+            gap: 8px;
+            margin-bottom: 10px;
+            margin-left: 60px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            .rowss {
+
+                .rowi {
+                    margin-bottom: 10px;
+                     
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #0A0A0A;
+                        margin-bottom: 10px;
+                    }
+    
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #0A0A0A;
+                    }
+                }
+
+                .block_row_content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+        
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #A2A8B0;
+                        }
+        
+                        u {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #BA75FE;
+                            cursor: pointer;
+                        }
+                    }
+        
+                    .likes {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+        
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #A2A8B0;
+                        }
+        
+                        img {
+                            width: 21px;
+                            height: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }

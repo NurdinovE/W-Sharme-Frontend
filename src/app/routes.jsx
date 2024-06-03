@@ -3,6 +3,7 @@ import { Chat } from '@/pages/chat/chat'
 import { AdminCommunity, Community, HomePage, LoginPage, RegisterPage } from '@/pages'
 import { Profile } from '../pages/profile/profile'
 import { Question } from '../pages/questions/question'
+import { Announcement } from '../pages/announcement/announcement'
 
 export const router = createBrowserRouter([
   {
@@ -36,11 +37,11 @@ export const router = createBrowserRouter([
   {
     path: '/question',
     element: <Question />
+  },
+  {
+    path: '/announcement',
+    element: <Announcement />
   }
-  // {
-  //   path: '/announcement',
-  //   element: < />
-  // },
   // {
   //   path: '/community',
   //   element: < />
