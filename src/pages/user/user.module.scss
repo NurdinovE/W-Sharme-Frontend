@@ -21,8 +21,8 @@
         .community_row {
             width: 100%;
             display: flex;
-            align-items: center;
-            gap: 57px;
+            align-items: start;
+            gap: 37px;
 
             .leomanic {
                 display: flex;
@@ -142,6 +142,33 @@
                         font-weight: 400;
                         color: #0A0A0A;
                     }
+                }
+            }
+
+            .row_buttons {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                button:nth-child(1) {
+                    width: 150px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: #BA75FE;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #F9FAFF;
+                }
+
+                button:nth-child(2) {
+                    width: 150px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    border: 1px solid #BA75FE;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #BA75FE;
                 }
             }
         }

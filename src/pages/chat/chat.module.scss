@@ -180,6 +180,8 @@
             height: 750px;
             background-color: #F9FAFF;
             padding: 20px 13px;
+            position: relative;
+            border-bottom-right-radius: 15px;
             
             .number {
                 display: flex;
@@ -295,6 +297,56 @@
                         color: #A2A8B0;
                         display: flex;
                         justify-content: end;
+                    }
+                }
+            }
+
+            .chat_block {
+                width: 573px;
+                height: 70px;
+                background-color: #F3F3F3;
+                box-shadow: 0 0 20px rgb(230, 228, 228);
+                border-bottom-right-radius: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 20px;
+                    cursor: pointer;
+                }
+
+                input {
+                    width: 458px;
+                    padding: 13px 9px;
+                    background-color: #fff;
+                    border-radius: 30px;
+                    border: 0;
+                    outline: 0;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #A2A8B0;
+                }
+
+                .krug {
+                    width: 38px;
+                    height: 38px;
+                    background-color: #BA75FE;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    img {
+                        width: 18px;
+                        height: 20px;
+                        margin: 0;
                     }
                 }
             }

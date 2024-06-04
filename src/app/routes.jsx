@@ -4,6 +4,8 @@ import { AdminCommunity, Community, HomePage, LoginPage, RegisterPage } from '@/
 import { Profile } from '../pages/profile/profile'
 import { Question } from '../pages/questions/question'
 import { Announcement } from '../pages/announcement/announcement'
+import { User } from '../pages/user/user'
+import { MainCommunity } from '../pages/main-community/main-community'
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ export const router = createBrowserRouter([
     element: <AdminCommunity />
   },
   {
+    path: '/main-community',
+    element: <MainCommunity />
+  },
+  {
     path: '/profile',
     element: <Profile />
   },
@@ -41,17 +47,9 @@ export const router = createBrowserRouter([
   {
     path: '/announcement',
     element: <Announcement />
+  },
+  {
+    path: '/user',
+    element: <User />
   }
-  // {
-  //   path: '/community',
-  //   element: < />
-  // },
-  // {
-  //   path: '/question',
-  //   element: < />
-  // },
-  // {
-  //   path: '/profile',
-  //   element: < />
-  // }
 ])

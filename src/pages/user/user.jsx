@@ -10,11 +10,10 @@ import pedikur from '../../../src/assets/pedikur.svg'
 import brovi from '../../../src/assets/brovi.svg'
 import resnisy from '../../../src/assets/resnisy.svg'
 import strijka from '../../../src/assets/strijka.svg'
-import settings from '../../../src/assets/settings-svgrepo-com-2 1.svg'
-import cls from './profile.module.scss'
+import cls from './user.module.scss'
 import { PageTemplate } from '../../widgets/page-template'
 
-export function Profile() {
+export function User() {
   return (
     <PageTemplate>
       <div className={cls.community}>
@@ -32,7 +31,6 @@ export function Profile() {
                     </p>
                   </div>
                 </div>
-                <img className={cls.set} src={settings} alt="" />
               </div>
               <div className={cls.follow}>
                 <div className={cls.fol}>
@@ -78,7 +76,10 @@ export function Profile() {
                 </div>
               </div>
             </div>
-            <button>Редактировать профиль</button>
+            <div className={cls.row_buttons}>
+              <button>Подисаться</button>
+              <button>Написать</button>
+            </div>
           </div>
         </div>
         <div className={cls.main_block}>

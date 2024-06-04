@@ -2,6 +2,8 @@ import { PageTemplate } from '@/widgets/page-template'
 import hands from '../../../src/assets/hands.svg'
 import lupa from '../../../src/assets/lupa.svg'
 import two from '../../../src/assets/two.svg'
+import screpka from '../../../src/assets/screpka.svg'
+import arrow from '../../../src/assets/Arrow 4.svg'
 import cls from './chat.module.scss'
 // import { useEffect, useState } from 'react'
 // import icon from '@/assets/bellIcon.svg'
@@ -117,6 +119,13 @@ export function Chat() {
                   </div>
                 </div>
                 <p className={cls.time}>00:49</p>
+              </div>
+            </div>
+            <div className={cls.chat_block}>
+              <img src={screpka} alt="" />
+              <input type="text" placeholder="Напишите сообщение..." />
+              <div className={cls.krug}>
+                <img src={arrow} alt="" />
               </div>
             </div>
           </div>
