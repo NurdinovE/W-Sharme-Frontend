@@ -6,6 +6,17 @@
 
     button:nth-child(1) {
         width: 192px;
+        background-color: #F3F3F3;
+        color: #A2A8B0;
+        border-radius: 10px;
+        outline: 0;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    button:nth-child(2) {
+        width: 192px;
         background-color: #BA75FE;
         border-radius: 10px;
         outline: 0;
@@ -13,17 +24,6 @@
         font-size: 16px;
         font-weight: 400;
         color: #fff;
-    }
-
-    button:nth-child(2) {
-        width: 192px;
-        background-color: #F3F3F3;
-        border-radius: 10px;
-        outline: 0;
-        padding: 10px;
-        font-size: 16px;
-        font-weight: 400;
-        color: #A2A8B0;
     }
 }
 
@@ -151,27 +151,41 @@
         .user {
             display: flex;
             align-items: center;
-            gap: 10px;
-            height: 40px;
-            padding-left: 20px;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            height: 100%;
+            
+            .use_row {
+                height: 40px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding-left: 20px;
+                margin-bottom: 20px;
 
-            img {
-                width: 43px;
-                height: 43px;
-                border-radius: 100%;
+                img {
+                    width: 43px;
+                    height: 43px;
+                    border-radius: 100%;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #0A0A0A;
+                }
             }
 
-            h2 {
-                font-size: 20px;
-                font-weight: 500;
-                color: #0A0A0A;
-            }
-
-            p {
-                font-size: 14px;
+            button {
+                width: 185px;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 16px;
                 font-weight: 400;
-                color: #A2A8B0;
+                background-color: #F4F5F8;
+                color: #BA75FE;
+                outline: 0;
+                margin-bottom: 20px;
+                margin-right: 7px;
             }
         }
 
