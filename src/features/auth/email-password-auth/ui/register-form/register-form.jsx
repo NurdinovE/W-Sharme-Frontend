@@ -1,16 +1,13 @@
+import React, { useState } from 'react'
 import { PasswordInput, Title, Text, Button, Input, Paper } from '@mantine/core'
 import classes from './register-form.module.css'
 import { NavLink } from 'react-router-dom'
+// import { doc, setDoc } from 'firebase/firestore' // Import Firestore functions
+// import { auth, db } from '../../../../../app/firebase/firebase-config.js'
 // import { useDispatch } from 'react-redux'
-import React, { useState } from 'react'
 // import { registerByUsername } from '../../model/services/registerByUsername.js'
-import {
-  createUserWithEmailAndPassword
-  // signInWithEmailAndPassword,
-} from 'firebase/auth'
-import { auth } from '../../../../../app/firebase/firebase-config.js'
 
-export function RegisterForm() {
+export function RegisterForm({ handleSignUp }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [checked, setChecked] = useState(false)
@@ -34,29 +31,20 @@ export function RegisterForm() {
   //   e.preventDefault()
   //   dispatch(registerByUsername(formData))
   // }
-
-  const handleSignUp = () => {
-    if (!email || !password) return
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(userCredential => {
-        const user = userCredential.user
-        console.log(user)
-      })
-      .catch(error => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        console.log(errorCode, errorMessage)
-      })
+  const handleRegister = e => {
+    e.preventDefault()
+    handleSignUp(email, password, checked)
   }
+
   const handleEmailChange = event => setEmail(event.target.value)
   const handlePasswordChange = event => setPassword(event.target.value)
 
   return (
     <Paper className={classes.register_wrapper}>
-      <Title order={2} ta="center" mb={'30px'}>
+      <Title order={2} ta="center" mb={'30px'} fz={'38px'} ff={'gteestiprodisplay'}>
         Регистрация
       </Title>
-      <form onSubmit={handleSignUp}>
+      <form onSubmit={handleRegister}>
         <Input
           name="email"
           placeholder="Эл.адрес"
@@ -90,13 +78,14 @@ export function RegisterForm() {
               height: '50px'
             }
           }}
-          onClick={event => handlePasswordChange(event)}
+          onChange={event => handlePasswordChange(event)}
           // value={password}
         />
         <div className={classes.checkbox}>
           <input
             className={classes.custom_checkbox}
             type="checkbox"
+            required
             onChange={() => {
               setChecked(!checked)
             }}

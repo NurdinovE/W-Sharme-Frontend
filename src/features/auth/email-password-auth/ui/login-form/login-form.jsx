@@ -5,33 +5,31 @@ import { memo, useState } from 'react'
 // import { loginByUsername } from '../../model/services/loginByUsername'
 import { Paper, Input, PasswordInput, Button, Title, Text, Center } from '@mantine/core'
 import classes from './login-form.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import {
   // createUserWithEmailAndPassword
   signInWithEmailAndPassword
 } from 'firebase/auth'
 import { auth } from '../../../../../app/firebase/firebase-config.js'
-
 export const LoginForm = memo(() => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const navigate = useNavigate()
   // const [isSignUpActive, setIsSignUpActive] = useState(true);
   // const handleMethodChange = () => {
   //   setIsSignUpActive(!isSignUpActive);
   // };
 
-  const handleSignIn = () => {
-    if (!email || !password) return
-    signInWithEmailAndPassword(auth, email, password)
-      .then(userCredential => {
-        const user = userCredential.user
-        console.log(user)
-      })
-      .catch(error => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        console.log(errorCode, errorMessage)
-      })
+  const handleSignIn = async e => {
+    e.preventDefault()
+    try {
+      await signInWithEmailAndPassword(auth, email, password)
+      navigate('/')
+    } catch (error) {
+      const errorCode = error.code
+      const errorMessage = error.message
+      console.log(errorCode, errorMessage)
+    }
   }
 
   const handleEmailChange = event => setEmail(event)

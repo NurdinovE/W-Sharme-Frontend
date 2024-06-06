@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app'
 // import { getAnalytics } from 'firebase/analytics'
 import { GoogleAuthProvider, getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,8 +17,6 @@ const firebaseConfig = {
   appId: '1:530055876323:web:d28f70b53bb95be6113fd6',
   measurementId: 'G-G3YWYPB7K1'
 }
-console.log(import.meta.env.VITE_API_KEY)
-
 // const firebaseConfig = {
 //   apiKey: import.meta.env.VITE_API_KEY,
 //   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
@@ -30,6 +29,7 @@ console.log(import.meta.env.VITE_API_KEY)
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
+export const db = getFirestore(app)
 export const googleProvider = new GoogleAuthProvider()
 
 // const analytics = getAnalytics(app)

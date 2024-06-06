@@ -4,9 +4,11 @@ import hands from '../../../src/assets/hands.svg'
 import like from '../../../src/assets/like.svg'
 import comment from '../../../src/assets/comment-1.svg'
 import podel from '../../../src/assets/podel.svg'
-// import { Text, Center, SimpleGrid, Button } from '@mantine/core'
-// import icon from '@/assets/bellIcon.svg'
+import { auth } from '../../app/firebase/firebase-config'
+import { useNavigate } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth'
 export function HomePage() {
+  const navigate = useNavigate()
   /* Задачи:
         Сверстай Home Page,
       Примечания:
@@ -14,6 +16,11 @@ export function HomePage() {
         если хочешь используй ее можешь пошарится на их сайте. 
         Или же делать по своей методике    
 */
+  const [user] = useAuthState(auth)
+  if (!user) {
+    navigate('/login')
+  }
+
   return (
     <PageTemplate>
       <div className="container">

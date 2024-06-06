@@ -4,6 +4,9 @@ import HeaderLogo from '../../../assets/logo.svg'
 import bell from '../../../assets/bellIcon.svg'
 import { IconSearch } from '@tabler/icons-react'
 import { useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '../../../app/firebase/firebase-config'
+import defaultProfile from '@/assets/profile.png'
 
 const useStyles = createStyles(theme => ({
   header: {
@@ -54,6 +57,7 @@ export function HeaderMenu() {
   // const [opened, { toggle }] = useDisclosure(false)
   const { classes } = useStyles()
   const [isActive, setIsActive] = useState(false)
+  const [user] = useAuthState(auth)
 
   const handleFocus = () => {
     setIsActive(true)
@@ -119,12 +123,25 @@ export function HeaderMenu() {
             </UnstyledButton>
           </Group>
           <Group className={classes.hiddenMobile}>
-            <Button variant="default">
-              <NavLink to="/login">Войти</NavLink>
-            </Button>
-            <Button>
-              <NavLink to="/register">Регистрация</NavLink>
-            </Button>
+            {user ? (
+              <>
+                <button className="sign-out" onClick={() => auth.signOut()}>
+                  Sign Out
+                </button>
+                <a href="/profile">
+                  <img src={defaultProfile} alt="DefaultImg" />
+                </a>
+              </>
+            ) : (
+              <>
+                <Button variant="default">
+                  <NavLink to="/login">Войти</NavLink>
+                </Button>
+                <Button>
+                  <NavLink to="/register">Регистрация</NavLink>
+                </Button>
+              </>
+            )}
           </Group>
           {/* <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" color="#000" />
           <Transition transition="pop-top-right" duration={200} mounted={opened}>

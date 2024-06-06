@@ -1,5 +1,7 @@
 export { HomePage } from './home/page.jsx'
+export { Chat } from './chat/chat.jsx'
 export { LoginPage } from './auth/sign-in'
 export { RegisterPage } from './auth/sign-up'
 export { Community } from './community/community.jsx'
 export { AdminCommunity } from './admin-community/admin-community.jsx'
+export { Profile } from './viewer/profile/ui/ui.jsx'
