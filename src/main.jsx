@@ -5,11 +5,14 @@ import App from '@/app.jsx'
 import { StoreProvider } from '@/app/config/store'
 
 import '@/app/styles/index.scss'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <MantineProvider>
-    <StoreProvider>
-      <App />
-    </StoreProvider>
-  </MantineProvider>
+  <BrowserRouter>
+    <MantineProvider>
+      <StoreProvider>
+        <App />
+      </StoreProvider>
+    </MantineProvider>
+  </BrowserRouter>
 )
